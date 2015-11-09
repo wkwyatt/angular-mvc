@@ -1,0 +1,40 @@
+html {
+	background-color: black;
+}
+
+#wrapper {
+	width: 40%;
+	padding: 30px;
+	background: #cacaca;
+	margin: auto;
+}
+
+#header {
+	position: relative;
+	border: #5c9bb7 10px solid;
+}
+
+h1 {
+	text-align: center;
+}
+
+h1:after {
+	content: '';
+	position: absolute;
+	border: #f190ac 12px solid;
+	border-color: #f190ac transparent transparent ;
+	width: 0;
+	height: 0;
+	bottom: -34px;
+	left: 50%;
+	margin-left: -12px;
+}
+
+.accepted {
+	border: 2px solid red;
+}
+
+.item {
+	margin: 10px;
+	font-size: 20px;
+}

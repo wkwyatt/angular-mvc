@@ -1,7 +1,7 @@
 var myApp = angular.module('myApp', []);
 myApp.controller('appController', appController);
 myApp.controller('myController', function($scope) {
-	$scope.items = [
+	$scope.classObject = [
 	{
 		name: "Freddy",
 		desc: "Made a cool weather widget"
@@ -30,6 +30,8 @@ myApp.controller('myController', function($scope) {
 		name: "Rob",
 		desc: "teach .."
 	}];
+
+	// $scope.color = myColor;
 });
 
 function appController($scope) {
