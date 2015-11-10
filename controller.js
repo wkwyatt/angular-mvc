@@ -1,5 +1,10 @@
 var myApp = angular.module('myApp', []);
 myApp.controller("session2Controller", function($scope) {
+
+	$score.addPerson = function(){
+		$scope.items.push($scope.newName);
+	}
+
 	$scope.items = [
 	{
 		name: "Freddy",
