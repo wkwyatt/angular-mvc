@@ -15,7 +15,7 @@
 
 	<div class="row">
 		<ul>
-			<li class="col-xs-5" ng-repeat="person in students | filter:filterSearch | orderBy:name">
+			<li class="col-xs-5" ng-repeat="person in students | filter:filterSearch | orderBy:'name'">
 				{{person.name}}: {{person.desc}} 
 				<button class="col-xs-2 btn btn-small btn-danger" href="#" ng-click="removeStudent(person)">Remove
 				</button>
