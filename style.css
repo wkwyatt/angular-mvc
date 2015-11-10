@@ -38,3 +38,8 @@ h1:after {
 	margin: 10px;
 	font-size: 20px;
 }
+
+li {
+	margin:	20px 0;
+	list-style: none;
+}
