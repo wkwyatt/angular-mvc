@@ -8,26 +8,26 @@
 </head>
 <body class="container" ng-controller="session2Controller">
 
-<div id="filter">
+<div id="row filter">
 	<input ng-model="filterSearch" type="text">
 
 </div>
 
 	<div class="row">
 		<ul>
-			<li class="col-xs-5" ng-repeat="person in students | filter:filterSearch | orderBy:'name'">
-				{{person.name}}: {{person.desc}} 
-				<button class="col-xs-2 btn btn-small btn-danger" href="#" ng-click="removeStudent(person)">Remove
-				</button>
+			<li ng-repeat="person in students | filter:filterSearch | orderBy:'name'"><span class="col-xs-6">
+				{{person.name}}: {{person.desc}} </span>
+				<a class="col-xs-2 btn btn-small btn-danger" href="#" ng-click="removeStudent(person)">Remove
+				</a>
 			</li>
 		</ul>
-
-		<form class="form-inline" ng-submit="addPerson()">
+	</div>
+		<form class=" row form-inline" ng-submit="addPerson()">
 			<input class="form-control" type="text" ng-model="newName">
 			<input class="form-control" type="text" ng-model="newDesc">
 			<input class="btn btn-submit" type="submit" >
 		</form>
-	</div>
+	
 
 </body>
 </html>
