@@ -3,8 +3,11 @@ myApp.controller("session2Controller", function($scope) {
 
 	$scope.addPerson = function(){
 		$scope.students.push({name: $scope.newName, desc: $scope.newDesc});
+		$scope.newName = "";
+		$scope.newDesc = "";
 	}
 
+	
 	$scope.students = [
 	{
 		name: "Freddy",
