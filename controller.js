@@ -1,8 +1,8 @@
 var myApp = angular.module('myApp', []);
 myApp.controller("session2Controller", function($scope) {
 
-	$score.addPerson = function(){
-		$scope.students.push($scope.newName);
+	$scope.addPerson = function(){
+		$scope.students.push({name: $scope.newName, desc: $scope.newDesc});
 	}
 
 	$scope.students = [
