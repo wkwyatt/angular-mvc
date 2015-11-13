@@ -6,28 +6,22 @@
 	<script type="text/javascript" src="controller.js"></script>
 	<link rel="stylesheet" href="style.css">
 </head>
-<body class="container" ng-controller="session2Controller">
-
-<div id="row filter">
-	<input ng-model="filterSearch" type="text">
-
-</div>
-
-	<div class="row">
-		<ul>
-			<li ng-repeat="person in students | filter:filterSearch | orderBy:'name'"><span class="col-xs-6">
-				{{person.name}}: {{person.desc}} </span>
-				<a class="col-xs-2 btn btn-small btn-danger" href="#" ng-click="removeStudent(person)">Remove
-				</a>
-			</li>
-		</ul>
+<body ng-controller="session2Controller">
+<div  class="container">
+	<div class="row">	
+		Search <input type="text" ng-model="query">
+		<table>
+			<tr>
+				<th><a href="#" ng-click="sortField = '-name'; reverse = !reverse">Name</a></th>
+				<th><a href="#" ng-click="sortField = '-desc'; reverse = !reverse">Description</a></th>
+			</tr>
+			<tr ng-repeat="person in students | filter:query | orderBy:sortField:reverse">
+				<td>{{person.name}}</td>
+				<td>{{person.desc}}</td>
+			</tr>
+		</table>
 	</div>
-		<form class=" row form-inline" ng-submit="addPerson()">
-			<input class="form-control" type="text" ng-model="newName">
-			<input class="form-control" type="text" ng-model="newDesc">
-			<input class="btn btn-submit" type="submit" >
-		</form>
-	
+</div>
 
 </body>
 </html>
